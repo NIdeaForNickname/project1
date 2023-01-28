@@ -4,5 +4,6 @@ class MyClass:
         self.height = 180
         print(self)
 
+
 var = MyClass
 print(var)
