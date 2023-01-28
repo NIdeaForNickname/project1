@@ -5,25 +5,20 @@ class MyClass:
     # print("Hello World")
     how = 0
 
-    def __init__(self, height):
+    def __init__(self, height=160, name = "noname", age = 12):
         self.height = height
-        print(self)
+        self.name = name
+        self.age=age
         MyClass.how += 1
 
-    def grow2(self, lis=None):
-        if lis is None:
-            lis = []
-        self.mid = 0
-        for i in range(len(lis)):
-            self.mid += lis[i]
-        self.mid = self.mid / len(lis)
+    def grow(self, height=5):
+        self.height+=height
+        return self.height
 
-
+namelist = ["Богдан", "Иван", "Коля", "Андрей", "Максим"]
 lst = []
-for i in range(random.randint(5, 10)):
-    hei = random.randint(140, 180)
-    lst.append(MyClass(height=hei))
-    print(lst[i])
-print(MyClass.how)
-hi = MyClass.grow2(lis=lst)
-print(hi)
+times = random.randint(5, 10)
+for i in range(times):
+    lst.append(MyClass(height=random.randint(140, 180), name=namelist[random.randint(0,4)], age=random.randint(12, 14)))
+for i in range(times):
+    print(f"Студент №{i+1}: {lst[i].name} \n {lst[i].age} лет \n Изначальный рост: {lst[i].height} \n текущий:{lst[i].grow(random.randint(0, 16))}")
