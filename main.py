@@ -5,3 +5,4 @@ class MyClass:
         print(self)
 
 var = MyClass
+print(var)
