@@ -101,7 +101,9 @@ class NewClass:
         if self.progress >= 100 and self.chekvariable == 4:
             mb.showinfo("Info", "You won")
             self.chekvariable = 5
-        self.CurrentDay["text"] = "Day: " + str(self.numday)
+        self.ButtonSt = Button(bg="red", fg="black", text="Study", command=self.Study)
+        self.ButtonSl = Button(bg="cyan", fg="black", text="Sleep", command=self.Sleep)
+        self.ButtonRe = Button(bg="green", fg="black", text="Rest", command=self.rest)
         self.ButtonRe.place(relx=0.1, rely=0.7, relwidth=0.4, relheight=0.2)
         self.ButtonSl.place(relx=0.1, rely=0.5, relwidth=0.4, relheight=0.2)
         self.ButtonSt.place(relx=0.1, rely=0.3, relwidth=0.4, relheight=0.2)
