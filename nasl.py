@@ -8,6 +8,8 @@ class Phone:
     def calling(self):
         if self.alive:
             print("Incoming call")
+    def Info(self):
+        print(f"Is on: {self.alive}")
 
 
 class Mobile(Phone):
@@ -22,6 +24,9 @@ class Mobile(Phone):
     def calling(self):
         if self.alive and self.battery >= 1:
             print("Incoming call")
+    def Info(self):
+        print(f"Is on: {self.alive}")
+        print(f"Current charge: {self.battery}")
 
 def poli():
     for i in Phone, Mobile:
