@@ -25,14 +25,13 @@ class Mobile(Phone):
         if self.alive and self.battery >= 1:
             print("Incoming call")
     def Info(self):
-        print(f"Is on: {self.alive}")
         print(f"Current charge: {self.battery}")
 
 def poli():
     for i in Phone, Mobile:
-        print(i)
-wadas = Mobile()
-wadas.work()
-wadas.calling()
-wadas.ChargeCheck(percents=100)
-poli()
+        i().Info()
+# wadas = Mobile()
+# wadas.work()
+# wadas.calling()
+# wadas.ChargeCheck(percents=100)
+print(poli())
